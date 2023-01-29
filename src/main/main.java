@@ -8,17 +8,9 @@ public class main {
           WelcomeScreen.welcomeMSG();
 
       while(true){
-        var moveTo = WelcomeScreen.runWelcomeScreen();
-
-        switch (moveTo){
-            case USER_INTERFACE:
-                  UserInterfaceScreen.runUIScreen();
-                  break;
+         WelcomeScreen.runWelcomeScreen();
         }
 
       }
 
-
-
-    }
 }

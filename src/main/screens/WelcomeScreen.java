@@ -46,7 +46,7 @@ public class WelcomeScreen {
             return false ;
         }
     }
-    static private Vars selectOption(String selectedOption)
+    static private void selectOption(String selectedOption)
     {
         Vars var = null;
         switch (selectedOption.toLowerCase()){
@@ -60,15 +60,16 @@ public class WelcomeScreen {
 
         switch (var){
             case USER_INTERFACE:
-                return Vars.USER_INTERFACE;
+                UserInterfaceScreen.runUIScreen();
+                break;
             case EXIT:
                 System.out.println("Thank you for using me!!" );
                 System.exit(0);
 
         }
-      return Vars.EXIT;
+
     }
-    static public Vars runWelcomeScreen()
+    static public void runWelcomeScreen()
     {
         String selectedOption = "" ;
         do {
@@ -79,7 +80,7 @@ public class WelcomeScreen {
         }while(!assertSelectedOption(selectedOption));
 
 
-      return selectOption(selectedOption);
+       selectOption(selectedOption);
 
     }
 
