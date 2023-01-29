@@ -21,7 +21,7 @@ This Project has the following Features
             1.	Didn’t need to use it
     b.	Algorithms 
         i.	Bubble sorting 
-        ii.	Linear Search
+        ii.	Linear Search 
 
 
 sprint Planning 
