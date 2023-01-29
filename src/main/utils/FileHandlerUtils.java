@@ -12,7 +12,11 @@ public class FileHandlerUtils {
             {
                 while (list[j].charAt(charTraverser) == list[j+1].charAt(charTraverser))
                 {
+                    if (list[j].contains(list[j+1]) || list[j+1].contains(list[j])) {break;}
+                    if ( (list[j].length()-1 == charTraverser) || (list[j+1].length()-1 == charTraverser)){break;}
                     charTraverser++;
+                    System.out.println(charTraverser);
+
                 }
 
                 if ( list[j].charAt(charTraverser) > list[j+1].charAt(charTraverser) )
@@ -23,6 +27,23 @@ public class FileHandlerUtils {
                 }
             }
         }
+    }
+
+
+
+    public static String linerSearchStrings(String[] list,String fileName)
+    {
+        StringBuilder result = new StringBuilder();
+        bubbleSortStringsAscending(list);
+        for (var travers : list)
+        {
+            if (fileName.equals(travers))
+            {
+                result.append(travers);
+                return "File "+result.toString()+" was found in the data base";
+            }
+        }
+       return "File Not Found";
     }
 
 

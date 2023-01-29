@@ -28,17 +28,17 @@ public class UserInterfaceScreen {
         String selectedOption = new Scanner(System.in).nextLine();
 
 
-
         switch (selectedOption.toLowerCase()){
             case "list all":
-
+                FileFeatures.listFiles();
+                UserInterfaceScreen.runUIScreen();
                 break;
             case "add":
                 FileFeatures.addFile();
                 UserInterfaceScreen.runUIScreen();
                 break;
             case "search":
-
+                FileFeatures.searchFile();
                 UserInterfaceScreen.runUIScreen();
                 break;
             case "delete":
@@ -53,11 +53,6 @@ public class UserInterfaceScreen {
                 selectOption();
         }
 
-    }
-
-    public static void main(String[] args)
-    {
-        selectOption();
     }
 
 
