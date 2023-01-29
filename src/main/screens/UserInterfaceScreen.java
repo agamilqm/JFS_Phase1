@@ -1,7 +1,12 @@
 package screens;
 
 public class UserInterfaceScreen {
-    private static void userInterface(){
+    public static void runUIScreen()
+    {
+        userInterface();
+    }
+    private static void userInterface()
+    {
         System.out.println("User Interface MENU ");
         System.out.println("==========================================  ");
         System.out.println("==========================================  ");
@@ -11,8 +16,9 @@ public class UserInterfaceScreen {
         System.out.println("    Delete");
         System.out.println("    Return");
     }
-    public static void enterUIScreen(){
-        userInterface();
-    }
+
+    private
+
+
 
 }

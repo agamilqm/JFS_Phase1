@@ -1,6 +1,5 @@
 import screens.UserInterfaceScreen;
 import screens.WelcomeScreen;
-import utils.Vars;
 
 public class main {
 
@@ -13,9 +12,10 @@ public class main {
 
         switch (moveTo){
             case USER_INTERFACE:
-                  UserInterfaceScreen.enterUIScreen();
+                  UserInterfaceScreen.runUIScreen();
                   break;
         }
+
       }
 
 
