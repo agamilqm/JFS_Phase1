@@ -1,6 +1,7 @@
 package features;
 
 import screens.UserInterfaceScreen;
+import utils.FileHandlerUtils;
 
 import java.io.File;
 import java.util.Arrays;
@@ -49,8 +50,14 @@ public class FileFeatures {
 
     }
 
+    public static void listFiles()
+    {
+        FileHandlerUtils.bubbleSortStringsAscending(rootPath.list());
+    }
+
+
     public static void main(String[] args)
     {
-        deleteFile();
+        listFiles();
     }
 }
